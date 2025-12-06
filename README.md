@@ -1,4 +1,4 @@
-HelpSort — NLP-Based Ticket Classification & Routing System
+# HelpSort — NLP-Based Ticket Classification & Routing System
 
 HelpSort is an end-to-end NLP platform for automatic classification, prioritization, and routing of support tickets.
 
