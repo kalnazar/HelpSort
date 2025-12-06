@@ -1,0 +1,77 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+pip-wheel-metadata/
+pip-delete-this-directory.txt
+
+# Virtual environments and environment files
+.env
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Python test / coverage
+.pytest_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# IDEs / Editors
+.vscode/
+.idea/
+*.swp
+*~
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Node / frontend
+client/node_modules/
+client/dist/
+client/.cache/
+client/.vite/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Model artifacts, vectorizers and large training outputs
+# NOTE: if you intentionally commit models, remove these lines
+server/models/model_schema/trained_models/
+
+# Data files (large CSVs, datasets)
+# NOTE: remove this if you want data/ versioned in the repo
+data/
+
+# Binary/serialized model files
+*.joblib
+*.pkl
+*.pickle
+*.pth
+
+# Logs
+*.log
+logs/
+server/*.log
+
+# Misc
+*.sqlite3
+*.db
+
+# Coverage / reports
+coverage/
+
+# OS temp files
+thumbs.db
+
+# End of .gitignore
