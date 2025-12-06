@@ -73,43 +73,6 @@ python server/training/train_routing_tfidf.py
 
 Training scripts read CSV files in `data/` (examples: `data/topic_train.csv`, `data/topic_val.csv`, etc.). See `data/README.txt` for CSV schema details and preprocessing notes.
 
-Running tests
-
-```bash
-pytest
-```
-
-Notes about tests:
-
-- Some tests in `tests/` reference model-loading behavior and may fail if required model artifacts or optional dependencies (e.g., heavy transformer tooling) are not available. Consider running tests with mocks or skipping expensive tests in CI.
-
-Production / deployment notes
-
-- For production serve the Flask app behind a production WSGI server such as Gunicorn. Example (from project root):
-
-```bash
-gunicorn -w 4 -b 0.0.0.0:5000 server.app:app
-```
-
-- Tune worker count according to CPU. Use process managers (systemd, Docker, Kubernetes) for stability.
-- Restrict CORS origins in production: currently the app enables broad CORS; tighten to allowed domains.
-
-Security & operational tips
-
-- Rate limiting (`Flask-Limiter`) is configured with conservative defaults — adjust as needed.
-- Avoid committing large model files or datasets to source control. Use the provided `.gitignore`.
-
-Troubleshooting
-
-- If `python server/app.py` fails with missing model files, check `server/models/model_schema/trained_models/` and run the training scripts.
-- If frontend cannot reach the backend, verify `client/.env`'s `VITE_API_BASE_URL` and that the backend is running and accessible.
-
-Contributing
-
-- Please open issues or pull requests. For training data changes, provide data source and license information.
-
-License & authors
+Authors
 
 - Created by students of KBTU as a Bachelor's Diploma Project.
-
-If you'd like, I can also add badges, a `CONTRIBUTING.md`, or a short `deploy.md` with a Dockerfile example.
