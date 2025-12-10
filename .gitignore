@@ -49,10 +49,6 @@ yarn-error.log*
 # NOTE: if you intentionally commit models, remove these lines
 server/models/model_schema/trained_models/
 
-# Data files (large CSVs, datasets)
-# NOTE: remove this if you want data/ versioned in the repo
-data/
-
 # Binary/serialized model files
 *.joblib
 *.pkl
